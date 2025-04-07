@@ -21,7 +21,18 @@ We can use a vegachart HTML tag like so:
 <vegachart schema-url="{{ site.baseurl }}/assets/json/cars.json" style="width: 100%"></vegachart>
 ```
 
-<vegachart schema-url="{{ site.baseurl }}/assets/json/cars.json" style="width: 100%"></vegachart>
+<h2>Bigfoot Sightings by State</h2>
+<div id="vis1"></div>
+<script type="text/javascript">
+  vegaEmbed('#vis1', '{{ site.baseurl }}/data/bigfoot_state_counts.json');
+</script>
+
+<h2>Seasonal Bigfoot Sightings (Interactive)</h2>
+<div id="vis2"></div>
+<script type="text/javascript">
+  vegaEmbed('#vis2', '{{ site.baseurl }}/data/bigfoot_season_time.json');
+</script>
+
 
 In theory, you can also use [Jekyll hooks](https://jekyllrb.com/docs/plugins/hooks/) to do it, but I haven't figured out a way that looks nice yet.
 
