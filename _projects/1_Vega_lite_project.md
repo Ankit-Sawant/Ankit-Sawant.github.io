@@ -21,17 +21,8 @@ We can use a vegachart HTML tag like so:
 <vegachart schema-url="{{ site.baseurl }}/assets/json/cars.json" style="width: 100%"></vegachart>
 ```
 
-<h2>Bigfoot Sightings by State</h2>
-<div id="vis1"></div>
-<script type="text/javascript">
-  vegaEmbed('#vis1', '{{ site.baseurl }}/data/bigfoot_state_counts.json');
-</script>
+<vegachart schema-url="{{ site.baseurl }}/assets/json/cars.json" style="width: 100%"></vegachart>
 
-<h2>Seasonal Bigfoot Sightings (Interactive)</h2>
-<div id="vis2"></div>
-<script type="text/javascript">
-  vegaEmbed('#vis2', '{{ site.baseurl }}/data/bigfoot_season_time.json');
-</script>
 
 
 In theory, you can also use [Jekyll hooks](https://jekyllrb.com/docs/plugins/hooks/) to do it, but I haven't figured out a way that looks nice yet.
@@ -61,7 +52,5 @@ Below is where we can put some links to both the data and the analysis code as b
 {% include elements/button.html link="https://github.com/jnaiman/online_cv_public/blob/main/python_notebooks/test_generate_plots.ipynb" text="The Analysis" %}
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
-<script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
-<script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
 
